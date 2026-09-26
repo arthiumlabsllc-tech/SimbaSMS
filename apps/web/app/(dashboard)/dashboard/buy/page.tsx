@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { apiFetch } from '@/lib/api';
-import { SUPPORTED_SERVICES, SUPPORTED_COUNTRIES } from '@simbasms/shared';
+import { SUPPORTED_SERVICES, SUPPORTED_COUNTRIES } from '@/lib/constants';
 
 export default function BuyPage() {
   const [service, setService] = useState('gmail');
