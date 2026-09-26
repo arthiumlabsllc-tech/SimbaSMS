@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  passwordHash  String
+  balanceCents  Int      @default(0) // Balance in USD cents (integer), never use floats
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  transactions  Transaction[]
+  orders        Order[]
+
+  @@map("users")
+}
+
+model Transaction {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id])
+
+  type            TxType   // DEPOSIT, ORDER_CHARGE, REFUND
+  amountCents     Int      // Positive = credit, negative = debit (in USD cents)
+  balanceAfter    Int      // Snapshot of user balance after this tx (in USD cents)
+
+  // Original deposit info (for local currency deposits)
+  originalAmount  Int?     // Original amount in local currency (kobo/pesewas)
+  originalCurrency String? // "NGN", "GHS", etc.
+  exchangeRate    Decimal? // Rate used for conversion
+
+  paystackRef     String?  @unique // Paystack reference code
+  paystackStatus  String?          // success / failed / pending
+
+  orderId         String?          // Linked order (if order charge/refund)
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@map("transactions")
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  userId          String
+  user            User        @relation(fields: [userId], references: [id])
+
+  service         String      // "openai", "gmail", "whatsapp", "tinder", etc.
+  country         String      // ISO 3166-1 alpha-2: "US", "UK", "NG"
+
+  providerName    String      // "virtualsms", "fivesim", "smspva"
+  providerOrderId String      // Provider-side order ID
+  phoneNumber     String?     // Assigned number (redacted in logs)
+
+  costCents       Int         // Amount charged to user wallet (in USD cents)
+  providerCostUsd Decimal     // Provider cost in USD
+
+  status          OrderStatus // PURCHASED -> WAITING -> RECEIVED | EXPIRED | REFUNDED
+  smsCode         String?
+  smsText         String?
+
+  expiresAt       DateTime
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  @@index([userId, status])
+  @@index([providerName, providerOrderId])
+  @@map("orders")
+}
+
+enum TxType {
+  DEPOSIT
+  ORDER_CHARGE
+  REFUND
+}
+
+enum OrderStatus {
+  PURCHASED
+  WAITING
+  RECEIVED
+  EXPIRED
+  REFUNDED
+}
