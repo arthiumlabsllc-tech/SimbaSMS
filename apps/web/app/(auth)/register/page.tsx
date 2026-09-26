@@ -144,7 +144,7 @@ export default function RegisterPage() {
                         key={i}
                         className={cn(
                           'h-1 flex-1 rounded-full transition-colors duration-300',
-                          i <= passwordStrength.score ? passwordStrength.color : 'bg-border'
+                          i <= passwordStrength.score ? passwordStrength.color : 'bg-line'
                         )}
                       />
                     ))}

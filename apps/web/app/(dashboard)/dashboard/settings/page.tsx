@@ -32,7 +32,7 @@ function Toggle({ enabled, onChange, label }: { enabled: boolean; onChange: (v: 
         onClick={() => onChange(!enabled)}
         className={cn(
           'relative w-10 h-5.5 rounded-full transition-colors duration-200',
-          enabled ? 'bg-primary' : 'bg-border'
+          enabled ? 'bg-primary' : 'bg-line'
         )}
       >
         <span className={cn(

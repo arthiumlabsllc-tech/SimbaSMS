@@ -217,9 +217,9 @@ export default function LandingPage() {
                 </div>
                 <div className="p-6 grid grid-cols-3 gap-4">
                   <div className="col-span-2 space-y-3">
-                    <div className="h-4 w-1/3 bg-border rounded animate-pulse" />
-                    <div className="h-8 w-2/3 bg-border/50 rounded animate-pulse" />
-                    <div className="h-4 w-1/2 bg-border/30 rounded animate-pulse" />
+                    <div className="h-4 w-1/3 bg-line rounded animate-pulse" />
+                    <div className="h-8 w-2/3 bg-line/50 rounded animate-pulse" />
+                    <div className="h-4 w-1/2 bg-line/30 rounded animate-pulse" />
                   </div>
                   <div className="space-y-2">
                     <div className="h-20 bg-primary/10 rounded-lg animate-pulse" />

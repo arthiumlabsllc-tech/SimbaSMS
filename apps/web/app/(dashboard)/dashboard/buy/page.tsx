@@ -143,14 +143,14 @@ export default function BuyPage() {
             >
               <span className={cn(
                 'w-5 h-5 rounded-full flex items-center justify-center text-body-xs',
-                step === s.num ? 'bg-white/20' : step > s.num ? 'bg-accent/20' : 'bg-border'
+                step === s.num ? 'bg-white/20' : step > s.num ? 'bg-accent/20' : 'bg-line'
               )}>
                 {step > s.num ? <Check className="h-3 w-3" /> : s.num}
               </span>
               <span className="hidden sm:inline">{s.label}</span>
             </button>
             {i < steps.length - 1 && (
-              <div className={cn('w-8 h-px', step > s.num ? 'bg-accent' : 'bg-border')} />
+              <div className={cn('w-8 h-px', step > s.num ? 'bg-accent' : 'bg-line')} />
             )}
           </div>
         ))}

@@ -22,11 +22,11 @@ export default function NotFound() {
           404
         </h1>
 
-        <h2 className="font-display text-heading-lg font-bold text-text-primary mb-3">
+        <h2 className="font-display text-heading-lg font-bold text-content mb-3">
           This number doesn&apos;t exist.
         </h2>
 
-        <p className="text-body-md text-text-secondary mb-8">
+        <p className="text-body-md text-content-secondary mb-8">
           The page you&apos;re looking for has expired or never existed. Maybe it was a virtual number all along.
         </p>
 

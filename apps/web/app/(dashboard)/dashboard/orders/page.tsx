@@ -156,7 +156,7 @@ export default function OrdersPage() {
               {filterCounts[tab.key] > 0 && (
                 <span className={cn(
                   'text-body-xs px-1.5 py-0.5 rounded-full',
-                  activeFilter === tab.key ? 'bg-white/20' : 'bg-border/50'
+                  activeFilter === tab.key ? 'bg-white/20' : 'bg-line/50'
                 )}>
                   {filterCounts[tab.key]}
                 </span>
