@@ -5,7 +5,7 @@ import Redis from 'ioredis';
 import { OrdersService } from '../orders/orders.service';
 import { ProviderRouter } from '../providers/provider-router';
 import { PrismaService } from '../common/prisma.service';
-import { SMS_POLL_INTERVAL_MS } from '@simbasms/shared';
+import { SMS_POLL_INTERVAL_MS } from '../common/constants';
 
 @Injectable()
 export class QueueService {

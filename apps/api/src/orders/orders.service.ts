@@ -14,7 +14,7 @@ import { QueueService } from '../websocket/queue.service';
 import {
   DEFAULT_MARKUP_PERCENT,
   ORDER_EXPIRY_MS,
-} from '@simbasms/shared';
+} from '../common/constants';
 
 @Injectable()
 export class OrdersService {

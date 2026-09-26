@@ -2,7 +2,7 @@ import { Injectable, Logger } from '@nestjs/common';
 import { SmsProvider } from './interfaces/sms-provider.interface';
 import { VirtualSmsProvider } from './virtualsms/virtualsms.provider';
 import { FiveSimProvider } from './fivesim/fivesim.provider';
-import { PROVIDER_FAILURE_THRESHOLD } from '@simbasms/shared';
+import { PROVIDER_FAILURE_THRESHOLD } from '../common/constants';
 
 /**
  * Provider Router

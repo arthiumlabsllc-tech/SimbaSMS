@@ -8,7 +8,7 @@ import {
 import { PaymentsService } from '../payments/payments.service';
 import { WalletService } from '../wallet/wallet.service';
 import { PrismaService } from '../common/prisma.service';
-import { convertToUsdCents, EXCHANGE_RATES } from '@simbasms/shared';
+import { convertToUsdCents, EXCHANGE_RATES } from '../common/constants';
 
 @Controller('payments')
 export class WebhooksController {

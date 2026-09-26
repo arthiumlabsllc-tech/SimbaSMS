@@ -14,7 +14,7 @@ import { WalletService } from '../wallet/wallet.service';
 import { PrismaService } from '../common/prisma.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { IsEnum, IsNumber, Min, Max } from 'class-validator';
-import { MIN_TOPUP_CENTS, MAX_TOPUP_CENTS } from '@simbasms/shared';
+import { MIN_TOPUP_CENTS, MAX_TOPUP_CENTS } from '../common/constants';
 
 enum CryptoCurrency {
   BTC = 'BTC',

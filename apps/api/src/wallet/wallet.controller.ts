@@ -11,7 +11,7 @@ import { WalletService } from './wallet.service';
 import { PaymentsService } from '../payments/payments.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { IsNumber, IsOptional, IsString, Min, Max } from 'class-validator';
-import { MIN_TOPUP_CENTS, MAX_TOPUP_CENTS, convertToUsdCents, EXCHANGE_RATES } from '@simbasms/shared';
+import { MIN_TOPUP_CENTS, MAX_TOPUP_CENTS, convertToUsdCents, EXCHANGE_RATES } from '../common/constants';
 
 class DepositDto {
   @IsNumber()
