@@ -1,6 +1,5 @@
-import type { Config } from 'tailwindcss';
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -51,7 +50,6 @@ const config: Config = {
           secondary: '#F0EEEA',
           'secondary-dark': '#353940',
         },
-        border: '#E8E5DF',
         // Status
         success: '#00C9A7',
         warning: '#FFB020',
@@ -153,5 +151,3 @@ const config: Config = {
   },
   plugins: [require('tailwindcss-animate')],
 };
-
-export default config;
