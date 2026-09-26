@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn('animate-pulse rounded-lg bg-border/50', className)}
+      className={cn('animate-pulse rounded-lg bg-line/50', className)}
       {...props}
     />
   );
@@ -25,7 +25,7 @@ function SkeletonText({ lines = 3, className }: { lines?: number; className?: st
 
 function SkeletonCard({ className }: { className?: string }) {
   return (
-    <div className={cn('rounded-xl border border-border p-5 space-y-3', className)}>
+    <div className={cn('rounded-xl border border-line p-5 space-y-3', className)}>
       <Skeleton className="h-4 w-1/3" />
       <Skeleton className="h-8 w-2/3" />
       <Skeleton className="h-4 w-1/2" />

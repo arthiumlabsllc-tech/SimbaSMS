@@ -17,13 +17,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="w-full">
         {label && (
-          <label htmlFor={id} className="block text-body-sm font-medium text-text-primary mb-1.5">
+          <label htmlFor={id} className="block text-body-sm font-medium text-content mb-1.5">
             {label}
           </label>
         )}
         <div className="relative">
           {startContent && (
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-content-tertiary">
               {startContent}
             </div>
           )}
@@ -31,8 +31,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             type={type}
             id={id}
             className={cn(
-              'flex h-11 w-full rounded-lg border bg-surface px-3 py-2 text-body-sm transition-colors duration-250',
-              'placeholder:text-text-tertiary',
+              'flex h-11 w-full rounded-lg border bg-elevated px-3 py-2 text-body-sm transition-colors duration-250',
+              'placeholder:text-content-tertiary',
               'focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary',
               'disabled:cursor-not-allowed disabled:opacity-50',
               startContent && 'pl-10',
@@ -41,7 +41,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 ? 'border-error focus:ring-error/30 focus:border-error'
                 : success
                 ? 'border-accent focus:ring-accent/30 focus:border-accent'
-                : 'border-border hover:border-text-tertiary',
+                : 'border-line hover:border-content-tertiary',
               className
             )}
             ref={ref}

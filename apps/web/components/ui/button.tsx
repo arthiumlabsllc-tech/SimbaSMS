@@ -11,9 +11,9 @@ const buttonVariants = cva(
         primary:
           'bg-gradient-to-r from-primary to-primary-dark text-white shadow-glow hover:shadow-lg hover:-translate-y-0.5',
         secondary:
-          'border border-border bg-surface text-text-primary hover:bg-surface-secondary hover:border-primary/30',
+          'border border-line bg-elevated text-content hover:bg-elevated-secondary hover:border-primary/30',
         ghost:
-          'text-text-secondary hover:text-text-primary hover:bg-surface-secondary',
+          'text-content-secondary hover:text-content hover:bg-elevated-secondary',
         danger:
           'bg-error text-white hover:bg-error/90 shadow-sm',
         success:

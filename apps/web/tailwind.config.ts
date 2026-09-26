@@ -11,47 +11,45 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary - Amber/Gold
+        // Brand — Amber/Gold
         primary: {
           DEFAULT: '#F5A623',
           dark: '#B36D0F',
           light: '#FFC857',
-          gradient: {
-            from: '#F5A623',
-            to: '#D4881A',
-          },
         },
-        // Accent - Teal
+        // Brand — Teal
         accent: {
           DEFAULT: '#00C9A7',
           dark: '#00A88A',
           light: '#33D4B8',
         },
-        // Backgrounds
-        background: {
-          light: '#FAFAF8',
+        // Page background
+        base: {
+          DEFAULT: '#FAFAF8',
           dark: '#0F1115',
         },
-        // Surfaces
-        surface: {
-          light: '#FFFFFF',
+        // Card/surface backgrounds
+        elevated: {
+          DEFAULT: '#FFFFFF',
           dark: '#1A1D23',
+          secondary: '#F5F4F1',
+          'secondary-dark': '#23262D',
         },
-        // Borders
-        border: {
-          light: '#E8E5DF',
+        // Text / icon colors
+        content: {
+          DEFAULT: '#1A1A1A',
+          secondary: '#6B6B6B',
+          tertiary: '#9A9A9A',
+          'dark': '#F5F5F5',
+          'secondary-dark': '#A0A0A0',
+          'tertiary-dark': '#707070',
+        },
+        // Divider / border colors
+        line: {
+          DEFAULT: '#E8E5DF',
           dark: '#2A2E36',
-        },
-        // Text
-        text: {
-          primary: {
-            light: '#1A1A1A',
-            dark: '#F5F5F5',
-          },
-          secondary: {
-            light: '#6B6B6B',
-            dark: '#A0A0A0',
-          },
+          secondary: '#F0EEEA',
+          'secondary-dark': '#353940',
         },
         // Status
         success: '#00C9A7',

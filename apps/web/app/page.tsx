@@ -91,7 +91,7 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-base">
       {/* ─── Navbar ──────────────────────────────────────────────────────── */}
       <nav className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
@@ -103,14 +103,14 @@ export default function LandingPage() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
                 <span className="text-white font-bold text-sm">S</span>
               </div>
-              <span className="font-display font-bold text-xl text-text-primary">SimbaSMS</span>
+              <span className="font-display font-bold text-xl text-content">SimbaSMS</span>
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
-              <a href="#how-it-works" className="text-body-sm text-text-secondary hover:text-text-primary transition-colors">How it Works</a>
-              <a href="#services" className="text-body-sm text-text-secondary hover:text-text-primary transition-colors">Services</a>
-              <a href="#pricing" className="text-body-sm text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
-              <a href="#faq" className="text-body-sm text-text-secondary hover:text-text-primary transition-colors">FAQ</a>
+              <a href="#how-it-works" className="text-body-sm text-content-secondary hover:text-content transition-colors">How it Works</a>
+              <a href="#services" className="text-body-sm text-content-secondary hover:text-content transition-colors">Services</a>
+              <a href="#pricing" className="text-body-sm text-content-secondary hover:text-content transition-colors">Pricing</a>
+              <a href="#faq" className="text-body-sm text-content-secondary hover:text-content transition-colors">FAQ</a>
             </div>
 
             <div className="hidden md:flex items-center gap-3">
@@ -136,10 +136,10 @@ export default function LandingPage() {
             className="md:hidden glass border-b"
           >
             <div className="px-4 py-4 space-y-3">
-              <a href="#how-it-works" className="block text-body-sm text-text-secondary py-2">How it Works</a>
-              <a href="#services" className="block text-body-sm text-text-secondary py-2">Services</a>
-              <a href="#pricing" className="block text-body-sm text-text-secondary py-2">Pricing</a>
-              <a href="#faq" className="block text-body-sm text-text-secondary py-2">FAQ</a>
+              <a href="#how-it-works" className="block text-body-sm text-content-secondary py-2">How it Works</a>
+              <a href="#services" className="block text-body-sm text-content-secondary py-2">Services</a>
+              <a href="#pricing" className="block text-body-sm text-content-secondary py-2">Pricing</a>
+              <a href="#faq" className="block text-body-sm text-content-secondary py-2">FAQ</a>
               <div className="flex gap-2 pt-2">
                 <Link href="/login" className="flex-1"><Button variant="secondary" className="w-full">Log in</Button></Link>
                 <Link href="/register" className="flex-1"><Button className="w-full">Get Started</Button></Link>
@@ -163,7 +163,7 @@ export default function LandingPage() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <h1 className="font-display text-display-lg sm:text-display-xl font-bold text-text-primary mb-6 max-w-4xl mx-auto">
+            <h1 className="font-display text-display-lg sm:text-display-xl font-bold text-content mb-6 max-w-4xl mx-auto">
               Verify Anything.{' '}
               <span className="text-gradient-primary">Anywhere.</span>{' '}
               Instantly.
@@ -171,7 +171,7 @@ export default function LandingPage() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <p className="text-body-lg sm:text-heading-sm text-text-secondary max-w-2xl mx-auto mb-8">
+            <p className="text-body-lg sm:text-heading-sm text-content-secondary max-w-2xl mx-auto mb-8">
               Buy real mobile numbers from 145+ countries to receive SMS verification codes for Gmail, OpenAI, WhatsApp, Tinder, and 2,500+ services.
             </p>
           </FadeIn>
@@ -190,7 +190,7 @@ export default function LandingPage() {
           </FadeIn>
 
           <FadeIn delay={0.4}>
-            <div className="mt-12 flex items-center justify-center gap-6 text-text-tertiary">
+            <div className="mt-12 flex items-center justify-center gap-6 text-content-tertiary">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 border-2 border-surface" />
@@ -208,12 +208,12 @@ export default function LandingPage() {
           {/* Hero visual - floating dashboard mockup */}
           <FadeIn delay={0.5}>
             <div className="mt-16 relative max-w-3xl mx-auto">
-              <div className="relative rounded-2xl border border-border bg-surface shadow-xl overflow-hidden">
-                <div className="p-4 border-b border-border flex items-center gap-2">
+              <div className="relative rounded-2xl border border-line bg-elevated shadow-xl overflow-hidden">
+                <div className="p-4 border-b border-line flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-error/50" />
                   <div className="w-3 h-3 rounded-full bg-warning/50" />
                   <div className="w-3 h-3 rounded-full bg-accent/50" />
-                  <div className="flex-1 text-center text-body-xs text-text-tertiary">dashboard.simbasms.com</div>
+                  <div className="flex-1 text-center text-body-xs text-content-tertiary">dashboard.simbasms.com</div>
                 </div>
                 <div className="p-6 grid grid-cols-3 gap-4">
                   <div className="col-span-2 space-y-3">
@@ -232,15 +232,15 @@ export default function LandingPage() {
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ delay: 1.5, duration: 0.5 }}
-                className="absolute -bottom-4 -right-4 sm:right-8 bg-surface border border-accent/30 rounded-xl p-3 shadow-lg"
+                className="absolute -bottom-4 -right-4 sm:right-8 bg-elevated border border-accent/30 rounded-xl p-3 shadow-lg"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
                     <MessageSquare className="h-4 w-4 text-accent" />
                   </div>
                   <div>
-                    <p className="text-body-xs font-medium text-text-primary">SMS Received!</p>
-                    <p className="text-body-xs text-text-tertiary mono">Code: 847291</p>
+                    <p className="text-body-xs font-medium text-content">SMS Received!</p>
+                    <p className="text-body-xs text-content-tertiary mono">Code: 847291</p>
                   </div>
                 </div>
               </motion.div>
@@ -250,7 +250,7 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Stats Strip ─────────────────────────────────────────────────── */}
-      <section className="border-y border-border bg-surface/50 py-12">
+      <section className="border-y border-line bg-elevated/50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -262,10 +262,10 @@ export default function LandingPage() {
               <FadeIn key={i} delay={i * 0.1}>
                 <div className="text-center">
                   <stat.icon className="h-5 w-5 text-primary mx-auto mb-2" />
-                  <div className="stat-number text-text-primary">
+                  <div className="stat-number text-content">
                     <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                   </div>
-                  <p className="text-body-sm text-text-secondary mt-1">{stat.label}</p>
+                  <p className="text-body-sm text-content-secondary mt-1">{stat.label}</p>
                 </div>
               </FadeIn>
             ))}
@@ -279,10 +279,10 @@ export default function LandingPage() {
           <FadeIn>
             <div className="text-center mb-16">
               <Badge variant="outline" size="lg" className="mb-4">Simple Process</Badge>
-              <h2 className="font-display text-display-sm sm:text-display-md font-bold text-text-primary mb-4">
+              <h2 className="font-display text-display-sm sm:text-display-md font-bold text-content mb-4">
                 How It Works
               </h2>
-              <p className="text-body-lg text-text-secondary max-w-2xl mx-auto">
+              <p className="text-body-lg text-content-secondary max-w-2xl mx-auto">
                 Three simple steps to receive your verification code
               </p>
             </div>
@@ -290,7 +290,7 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-3 gap-8 relative">
             {/* Connecting line */}
-            <div className="hidden md:block absolute top-16 left-1/6 right-1/6 h-px border-t-2 border-dashed border-border" />
+            <div className="hidden md:block absolute top-16 left-1/6 right-1/6 h-px border-t-2 border-dashed border-line" />
 
             {[
               { step: 1, title: 'Fund Your Wallet', desc: 'Top up with Momo, card, or bank transfer via Paystack. Pay in NGN, GHS, or crypto — balance is in USD.', icon: CreditCard },
@@ -298,15 +298,15 @@ export default function LandingPage() {
               { step: 3, title: 'Receive Your Code', desc: 'Get a real phone number and receive the SMS verification code in real-time. Average delivery: 30 seconds.', icon: MessageSquare },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.15}>
-                <div className="relative text-center card-hover rounded-xl border border-border bg-surface p-6">
+                <div className="relative text-center card-hover rounded-xl border border-line bg-elevated p-6">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center mx-auto mb-4 shadow-glow">
                     <item.icon className="h-6 w-6 text-white" />
                   </div>
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-body-xs font-bold px-3 py-1 rounded-full">
                     Step {item.step}
                   </div>
-                  <h3 className="font-display text-heading-sm font-semibold text-text-primary mb-2">{item.title}</h3>
-                  <p className="text-body-sm text-text-secondary">{item.desc}</p>
+                  <h3 className="font-display text-heading-sm font-semibold text-content mb-2">{item.title}</h3>
+                  <p className="text-body-sm text-content-secondary">{item.desc}</p>
                 </div>
               </FadeIn>
             ))}
@@ -315,15 +315,15 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Supported Services ──────────────────────────────────────────── */}
-      <section id="services" className="section bg-surface/30">
+      <section id="services" className="section bg-elevated/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-12">
               <Badge variant="outline" size="lg" className="mb-4">2,500+ Services</Badge>
-              <h2 className="font-display text-display-sm sm:text-display-md font-bold text-text-primary mb-4">
+              <h2 className="font-display text-display-sm sm:text-display-md font-bold text-content mb-4">
                 Works With Everything
               </h2>
-              <p className="text-body-lg text-text-secondary max-w-2xl mx-auto">
+              <p className="text-body-lg text-content-secondary max-w-2xl mx-auto">
                 From social media to AI platforms, we support verification for thousands of services
               </p>
             </div>
@@ -332,12 +332,12 @@ export default function LandingPage() {
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
             {services.map((service, i) => (
               <FadeIn key={i} delay={i * 0.05}>
-                <div className="card-hover rounded-xl border border-border bg-surface p-4 text-center cursor-pointer group">
+                <div className="card-hover rounded-xl border border-line bg-elevated p-4 text-center cursor-pointer group">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-2 group-hover:bg-primary/20 transition-colors">
                     <service.icon className="h-5 w-5 text-primary" />
                   </div>
-                  <p className="text-body-xs font-medium text-text-primary">{service.name}</p>
-                  <p className="text-body-xs text-text-tertiary mt-0.5">From $0.50</p>
+                  <p className="text-body-xs font-medium text-content">{service.name}</p>
+                  <p className="text-body-xs text-content-tertiary mt-0.5">From $0.50</p>
                 </div>
               </FadeIn>
             ))}
@@ -361,7 +361,7 @@ export default function LandingPage() {
           <FadeIn>
             <div className="text-center mb-12">
               <Badge variant="outline" size="lg" className="mb-4">Why Choose Us</Badge>
-              <h2 className="font-display text-display-sm sm:text-display-md font-bold text-text-primary mb-4">
+              <h2 className="font-display text-display-sm sm:text-display-md font-bold text-content mb-4">
                 The SimbaSMS Advantage
               </h2>
             </div>
@@ -369,9 +369,9 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <FadeIn>
-              <div className="rounded-xl border-2 border-primary/30 bg-surface p-6 relative overflow-hidden">
+              <div className="rounded-xl border-2 border-primary/30 bg-elevated p-6 relative overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary-dark" />
-                <h3 className="font-display text-heading-md font-bold text-text-primary mb-4 flex items-center gap-2">
+                <h3 className="font-display text-heading-md font-bold text-content mb-4 flex items-center gap-2">
                   <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
                     <span className="text-primary font-bold text-sm">S</span>
                   </div>
@@ -388,7 +388,7 @@ export default function LandingPage() {
                   ].map(([text, check], i) => (
                     <div key={i} className="flex items-center gap-3">
                       <Check className="h-4 w-4 text-accent shrink-0" />
-                      <span className="text-body-sm text-text-primary">{text as string}</span>
+                      <span className="text-body-sm text-content">{text as string}</span>
                     </div>
                   ))}
                 </div>
@@ -396,8 +396,8 @@ export default function LandingPage() {
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <div className="rounded-xl border border-border bg-surface/50 p-6 opacity-70">
-                <h3 className="font-display text-heading-md font-semibold text-text-secondary mb-4">Other Platforms</h3>
+              <div className="rounded-xl border border-line bg-elevated/50 p-6 opacity-70">
+                <h3 className="font-display text-heading-md font-semibold text-content-secondary mb-4">Other Platforms</h3>
                 <div className="space-y-3">
                   {[
                     ['Higher markups', false],
@@ -409,7 +409,7 @@ export default function LandingPage() {
                   ].map(([text, check], i) => (
                     <div key={i} className="flex items-center gap-3">
                       <X className="h-4 w-4 text-error shrink-0" />
-                      <span className="text-body-sm text-text-secondary">{text as string}</span>
+                      <span className="text-body-sm text-content-secondary">{text as string}</span>
                     </div>
                   ))}
                 </div>
@@ -420,14 +420,14 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Trust & Security ────────────────────────────────────────────── */}
-      <section className="section bg-surface/30">
+      <section className="section bg-elevated/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="font-display text-display-sm font-bold text-text-primary mb-4">
+              <h2 className="font-display text-display-sm font-bold text-content mb-4">
                 Trust & Security
               </h2>
-              <p className="text-body-lg text-text-secondary">Your money and data are safe with us</p>
+              <p className="text-body-lg text-content-secondary">Your money and data are safe with us</p>
             </div>
           </FadeIn>
 
@@ -439,12 +439,12 @@ export default function LandingPage() {
               { icon: CreditCard, title: 'Instant Refunds', desc: 'Automatic refunds when orders expire or fail.' },
             ].map((item, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <div className="card-hover rounded-xl border border-border bg-surface p-5">
+                <div className="card-hover rounded-xl border border-line bg-elevated p-5">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
                     <item.icon className="h-5 w-5 text-primary" />
                   </div>
-                  <h3 className="font-semibold text-text-primary mb-1">{item.title}</h3>
-                  <p className="text-body-sm text-text-secondary">{item.desc}</p>
+                  <h3 className="font-semibold text-content mb-1">{item.title}</h3>
+                  <p className="text-body-sm text-content-secondary">{item.desc}</p>
                 </div>
               </FadeIn>
             ))}
@@ -458,7 +458,7 @@ export default function LandingPage() {
           <FadeIn>
             <div className="text-center mb-12">
               <Badge variant="outline" size="lg" className="mb-4">FAQ</Badge>
-              <h2 className="font-display text-display-sm font-bold text-text-primary mb-4">
+              <h2 className="font-display text-display-sm font-bold text-content mb-4">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -467,14 +467,14 @@ export default function LandingPage() {
           <div className="space-y-3">
             {faqs.map((faq, i) => (
               <FadeIn key={i} delay={i * 0.05}>
-                <div className="rounded-xl border border-border bg-surface overflow-hidden">
+                <div className="rounded-xl border border-line bg-elevated overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full flex items-center justify-between p-5 text-left hover:bg-surface-secondary transition-colors"
+                    className="w-full flex items-center justify-between p-5 text-left hover:bg-elevated-secondary transition-colors"
                   >
-                    <span className="font-medium text-text-primary pr-4">{faq.q}</span>
+                    <span className="font-medium text-content pr-4">{faq.q}</span>
                     <ChevronDown className={cn(
-                      'h-5 w-5 text-text-tertiary shrink-0 transition-transform duration-250',
+                      'h-5 w-5 text-content-tertiary shrink-0 transition-transform duration-250',
                       openFaq === i && 'rotate-180'
                     )} />
                   </button>
@@ -485,7 +485,7 @@ export default function LandingPage() {
                       transition={{ duration: 0.25 }}
                       className="px-5 pb-5"
                     >
-                      <p className="text-body-sm text-text-secondary">{faq.a}</p>
+                      <p className="text-body-sm text-content-secondary">{faq.a}</p>
                     </motion.div>
                   )}
                 </div>
@@ -502,10 +502,10 @@ export default function LandingPage() {
 
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
-            <h2 className="font-display text-display-sm sm:text-display-md font-bold text-text-primary mb-4">
+            <h2 className="font-display text-display-sm sm:text-display-md font-bold text-content mb-4">
               Ready to verify without limits?
             </h2>
-            <p className="text-body-lg text-text-secondary mb-8">
+            <p className="text-body-lg text-content-secondary mb-8">
               Create your account in 30 seconds. Fund with Momo. Start verifying.
             </p>
             <Link href="/register">
@@ -513,7 +513,7 @@ export default function LandingPage() {
                 Create Free Account
               </Button>
             </Link>
-            <p className="text-body-sm text-text-tertiary mt-4">
+            <p className="text-body-sm text-content-tertiary mt-4">
               No subscription. Pay only for what you use.
             </p>
           </FadeIn>
@@ -521,55 +521,55 @@ export default function LandingPage() {
       </section>
 
       {/* ─── Footer ──────────────────────────────────────────────────────── */}
-      <footer className="border-t border-border bg-surface/50 py-12">
+      <footer className="border-t border-line bg-elevated/50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="font-semibold text-text-primary mb-3">Product</h4>
+              <h4 className="font-semibold text-content mb-3">Product</h4>
               <div className="space-y-2">
-                <a href="#services" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">Services</a>
-                <a href="#pricing" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">Pricing</a>
-                <a href="#" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">API</a>
+                <a href="#services" className="block text-body-sm text-content-secondary hover:text-content transition-colors">Services</a>
+                <a href="#pricing" className="block text-body-sm text-content-secondary hover:text-content transition-colors">Pricing</a>
+                <a href="#" className="block text-body-sm text-content-secondary hover:text-content transition-colors">API</a>
               </div>
             </div>
             <div>
-              <h4 className="font-semibold text-text-primary mb-3">Company</h4>
+              <h4 className="font-semibold text-content mb-3">Company</h4>
               <div className="space-y-2">
-                <a href="#" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">About</a>
-                <a href="#" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">Blog</a>
-                <a href="#" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">Contact</a>
+                <a href="#" className="block text-body-sm text-content-secondary hover:text-content transition-colors">About</a>
+                <a href="#" className="block text-body-sm text-content-secondary hover:text-content transition-colors">Blog</a>
+                <a href="#" className="block text-body-sm text-content-secondary hover:text-content transition-colors">Contact</a>
               </div>
             </div>
             <div>
-              <h4 className="font-semibold text-text-primary mb-3">Legal</h4>
+              <h4 className="font-semibold text-content mb-3">Legal</h4>
               <div className="space-y-2">
-                <a href="#" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">Terms</a>
-                <a href="#" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">Privacy</a>
-                <a href="#" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">Refund Policy</a>
+                <a href="#" className="block text-body-sm text-content-secondary hover:text-content transition-colors">Terms</a>
+                <a href="#" className="block text-body-sm text-content-secondary hover:text-content transition-colors">Privacy</a>
+                <a href="#" className="block text-body-sm text-content-secondary hover:text-content transition-colors">Refund Policy</a>
               </div>
             </div>
             <div>
-              <h4 className="font-semibold text-text-primary mb-3">Support</h4>
+              <h4 className="font-semibold text-content mb-3">Support</h4>
               <div className="space-y-2">
-                <a href="#" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">Help Center</a>
-                <a href="#" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">Telegram</a>
-                <a href="mailto:support@simbasms.com" className="block text-body-sm text-text-secondary hover:text-text-primary transition-colors">Email</a>
+                <a href="#" className="block text-body-sm text-content-secondary hover:text-content transition-colors">Help Center</a>
+                <a href="#" className="block text-body-sm text-content-secondary hover:text-content transition-colors">Telegram</a>
+                <a href="mailto:support@simbasms.com" className="block text-body-sm text-content-secondary hover:text-content transition-colors">Email</a>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="border-t border-line pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 rounded-md bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
                 <span className="text-white font-bold text-xs">S</span>
               </div>
-              <span className="text-body-sm text-text-secondary">© 2026 SimbaSMS. Made in Nigeria 🇳🇬</span>
+              <span className="text-body-sm text-content-secondary">© 2026 SimbaSMS. Made in Nigeria 🇳🇬</span>
             </div>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-text-tertiary hover:text-text-primary transition-colors">
+              <a href="#" className="text-content-tertiary hover:text-content transition-colors">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
               </a>
-              <a href="#" className="text-text-tertiary hover:text-text-primary transition-colors">
+              <a href="#" className="text-content-tertiary hover:text-content transition-colors">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               </a>
             </div>
