@@ -51,6 +51,7 @@ const config: Config = {
           secondary: '#F0EEEA',
           'secondary-dark': '#353940',
         },
+        border: '#E8E5DF',
         // Status
         success: '#00C9A7',
         warning: '#FFB020',
