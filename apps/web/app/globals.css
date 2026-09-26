@@ -5,11 +5,34 @@
 /* ─── CSS Variables ─────────────────────────────────────────────────────── */
 @layer base {
   :root {
+    /* ── shadcn/ui tokens ─────────────────────────────────────────── */
+    --background: 0 0% 100%;
+    --foreground: 30 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 10%;
+    --primary: 38 90% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 40 20% 95%;
+    --secondary-foreground: 30 10% 10%;
+    --muted: 40 10% 95%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 166 100% 40%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 15% 89%;
+    --input: 35 15% 89%;
+    --ring: 38 90% 55%;
+    --radius: 0.75rem;
+
+    /* ── SimbaSMS brand tokens ────────────────────────────────────── */
     /* Brand */
-    --primary: #F5A623;
+    --primary-hex: #F5A623;
     --primary-dark: #B36D0F;
     --primary-light: #FFC857;
-    --accent: #00C9A7;
+    --accent-hex: #00C9A7;
     --accent-dark: #00A88A;
 
     /* Backgrounds */
@@ -35,7 +58,6 @@
     --info: #3B82F6;
 
     /* Misc */
-    --radius: 0.75rem;
 
     /* Shadows */
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
@@ -51,11 +73,33 @@
   }
 
   .dark {
+    /* ── shadcn/ui tokens (dark) ──────────────────────────────────── */
+    --background: 225 15% 7%;
+    --foreground: 0 0% 96%;
+    --card: 225 15% 10%;
+    --card-foreground: 0 0% 96%;
+    --popover: 225 15% 10%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 38 90% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 225 10% 15%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 225 10% 15%;
+    --muted-foreground: 0 0% 63%;
+    --accent: 166 100% 40%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 225 12% 18%;
+    --input: 225 12% 18%;
+    --ring: 38 90% 55%;
+
+    /* ── SimbaSMS brand tokens (dark) ─────────────────────────────── */
     /* Brand */
-    --primary: #F5A623;
+    --primary-hex: #F5A623;
     --primary-dark: #B36D0F;
     --primary-light: #FFC857;
-    --accent: #00C9A7;
+    --accent-hex: #00C9A7;
     --accent-dark: #00A88A;
 
     /* Backgrounds */
@@ -97,6 +141,7 @@
 /* ─── Base Styles ───────────────────────────────────────────────────────── */
 @layer base {
   * {
+    @apply border-border;
     border-color: var(--line);
   }
 

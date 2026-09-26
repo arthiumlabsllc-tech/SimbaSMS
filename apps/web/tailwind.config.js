@@ -10,6 +10,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // ── shadcn/ui tokens (CSS variable-driven) ──────────────────
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+        destructive: { DEFAULT: 'hsl(var(--destructive))', foreground: 'hsl(var(--destructive-foreground))' },
+        muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+        popover: { DEFAULT: 'hsl(var(--popover))', foreground: 'hsl(var(--popover-foreground))' },
+        card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+        // ── SimbaSMS brand tokens ───────────────────────────────────
         // Brand — Amber/Gold
         primary: {
           DEFAULT: '#F5A623',
@@ -80,6 +92,9 @@ module.exports = {
         '30': '7.5rem',
       },
       borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
         '4xl': '2rem',
       },
       boxShadow: {
@@ -91,6 +106,8 @@ module.exports = {
         'glow-teal': '0 0 24px rgba(0,201,167,0.35)',
       },
       animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in': 'fadeIn 0.4s ease-out',
         'fade-up': 'fadeUp 0.4s ease-out',
         'slide-in-right': 'slideInRight 0.3s ease-out',
@@ -102,6 +119,8 @@ module.exports = {
         'count-up': 'countUp 1s ease-out forwards',
       },
       keyframes: {
+        'accordion-down': { from: { height: '0' }, to: { height: 'var(--radix-accordion-content-height)' } },
+        'accordion-up': { from: { height: 'var(--radix-accordion-content-height)' }, to: { height: '0' } },
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
